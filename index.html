@@ -8,11 +8,12 @@
 </head>
 
 <body>
-    <div class="row" style="overflow:auto;  min-height:100vh">
+    <div class="row" style="overflow:auto; min-height:100vh">
+        <!-- PAGE LAYOUT -->
         <div class="layout" style="gap: 36px;">
 
-            <!-- COPY -->
-            <div id="copy" class="column " style="flex-grow: 1; gap: 20px;">
+            <!-- COPY SECTION -->
+            <div class="column grow" style="gap: 20px;">
 
                 <!-- BRAND -->
                 <div>
@@ -20,12 +21,12 @@
                 </div>
 
                 <!-- HEADER -->
-                <h1>
+                <h1 class="copy-header">
                     Get More From Your <span class="accentText">Content</span>.
                 </h1>
 
-                <!-- COPY -->
-                <p>
+                <!-- BODY -->
+                <p class="copy-body">
                     Social.Ly helps you optimize your brands'
                     publications to reach a larger audience,
                     integrating social content with you website.
@@ -33,47 +34,46 @@
 
             </div>
 
-            <!--FORM-->
-            <div class="card" style="flex-shrink: 0; position:relative;">
-                <!--BADGE-->
-                <div class="offer-badge" style="position:absolute; top:-14px; left:-11px;">
-                    Limited Offer
-                </div>
-                <!--FORM-->
+            <!-- FORM SECTION -->
+            <div class="card shrink">
+
+                <!-- BADGE-->
+                <div class="offer-badge"> Limited Offer </div>
+
+                <!-- FORM -->
                 <form id="form" class="column" style="gap: 18px;">
 
-                    <!--TITLE-->
-                    <h3 class="form-title">
+                    <!-- TITLE -->
+                    <h3 class="form-header">
                         Sign up to get your free trial today!
                     </h3>
 
-                    <!--NAME-->
+                    <!-- NAME -->
                     <div class="column" style="gap: 6px;">
-                        <label class="input-label" for="name">Name</label>
-                        <input type="text" id="name" name="name" placeholder="Enter your name" class="inputField"
-                            required />
+                        <label for="name" class="input-label">Name</label>
+                        <input required id="name" name="name" type="text" placeholder="Enter your name"
+                            class="input-field" />
                     </div>
 
-                    <!--EMAIL-->
+                    <!-- EMAIL -->
                     <div class="column" style="gap: 6px;">
-                        <label class="input-label" for="email">Email</label>
-                        <input type="email" id="email" name="email" placeholder="Enter your email" class="inputField"
-                            required />
+                        <label for="email" class="input-label">Email</label>
+                        <input required id="email" name="email" type="email" placeholder="Enter your email"
+                            class="input-field" />
                     </div>
 
-                    <!--TERMS-->
-                    <div class="row">
-                        <input type="checkbox" id="terms" name="terms" style="margin-right:8px; flex-shrink: 0;"
+                    <!-- TERMS -->
+                    <div class="row" style="gap: 8px;">
+                        <input required id="terms" name="terms" type="checkbox" class="shrink"
                             oninvalid="this.setCustomValidity('Please accept the Terms and Conditions')"
-                            onchange="this.setCustomValidity(validity.valueMissing ? 'Please accept the Terms and Conditions' : '');"
-                            required />
-                        <label class="input-label" for="terms">
+                            onchange="this.setCustomValidity(validity.valueMissing ? 'Please accept the Terms and Conditions' : '');" />
+                        <label for="terms" class="input-label">
                             I agree to the <u>terms and conditions</u>
                         </label>
                     </div>
 
-                    <!--SUBMIT-->
-                    <button id="submit" type="submit" style="margin-top:14px;" class="button">
+                    <!-- SUBMIT BUTTON -->
+                    <button id="submit" type="submit" style="margin-top:14px;" class="submit-button">
                         Start My Free Trial
                     </button>
                 </form>
@@ -83,14 +83,17 @@
 
         <!-- MODAL -->
         <div id="modal" class="modal">
+
             <!-- MODAL OVERLAY -->
-            <div id="overlay" class="overlay" />
+            <div id="overlay" class="modal-overlay" />
+
+            <!-- MODAL CONTENT -->
             <div class="modal-content">
 
                 <!-- CLOSE BUTTON -->
                 <button id="close">&times;</button>
 
-                <div class="column" style="gap:11px; text-align:center; position:relative;">
+                <div class="column" style="gap:11px; text-align:center; ">
 
                     <!-- WELCOME IMAGE -->
                     <div>
