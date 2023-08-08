@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Work Sans:400,500,600,700,800,900,1000' rel='stylesheet'>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="row" style="overflow:auto;  min-height:100vh">
+        <div class="layout" style="gap: 36px;">
+
+            <!-- COPY -->
+            <div id="copy" class="column " style="flex-grow: 1; gap: 20px;">
+
+                <!-- BRAND -->
+                <div>
+                    <img src="images/Group 16@2x.png" alt="Logo" height="40" />
+                </div>
+
+                <!-- HEADER -->
+                <h1>
+                    Get More From Your <span class="accentText">Content</span>.
+                </h1>
+
+                <!-- COPY -->
+                <p>
+                    Social.Ly helps you optimize your brands'
+                    publications to reach a larger audience,
+                    integrating social content with you website.
+                </p>
+
+            </div>
+
+            <!--FORM-->
+            <div class="card" style="flex-shrink: 0; position:relative;">
+                <!--BADGE-->
+                <div class="offer-badge" style="position:absolute; top:-14px; left:-11px;">
+                    Limited Offer
+                </div>
+                <!--FORM-->
+                <form id="form" class="column" style="gap: 18px;">
+
+                    <!--TITLE-->
+                    <h3 class="form-title">
+                        Sign up to get your free trial today!
+                    </h3>
+
+                    <!--NAME-->
+                    <div class="column" style="gap: 6px;">
+                        <label class="input-label" for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your name" class="inputField"
+                            required />
+                    </div>
+
+                    <!--EMAIL-->
+                    <div class="column" style="gap: 6px;">
+                        <label class="input-label" for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" class="inputField"
+                            required />
+                    </div>
+
+                    <!--TERMS-->
+                    <div class="row">
+                        <input type="checkbox" id="terms" name="terms" style="margin-right:8px; flex-shrink: 0;"
+                            oninvalid="this.setCustomValidity('Please accept the Terms and Conditions')"
+                            onchange="this.setCustomValidity(validity.valueMissing ? 'Please accept the Terms and Conditions' : '');"
+                            required />
+                        <label class="input-label" for="terms">
+                            I agree to the <u>terms and conditions</u>
+                        </label>
+                    </div>
+
+                    <!--SUBMIT-->
+                    <button id="submit" type="submit" style="margin-top:14px;" class="button">
+                        Start My Free Trial
+                    </button>
+                </form>
+
+            </div>
+        </div>
+
+        <!-- MODAL -->
+        <div id="modal" class="modal">
+            <!-- MODAL OVERLAY -->
+            <div id="overlay" class="overlay" />
+            <div class="modal-content">
+
+                <!-- CLOSE BUTTON -->
+                <button id="close">&times;</button>
+
+                <div class="column" style="gap:11px; text-align:center; position:relative;">
+
+                    <!-- WELCOME IMAGE -->
+                    <div>
+                        <img src="images/Welcome@2x.png" alt="welcome" width="104" height="120">
+                    </div>
+
+                    <!-- GREETING -->
+                    <h4>Welcome <span id="firstName"></span>!</h4>
+
+                    <!-- MESSAGE -->
+                    <p>
+                        Thanks for filling out the form.
+                        A confirmation email has been sent to your
+                        <span id="accountType"></span>
+                        account.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
